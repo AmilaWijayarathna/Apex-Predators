@@ -20,6 +20,8 @@
 		46D767642CF3AC0F00D6F348 /* PredatorMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D767632CF3AC0F00D6F348 /* PredatorMapView.swift */; };
 		46DC2EB32CE918D900F0F7A4 /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC2EB22CE918D900F0F7A4 /* ApexPredator.swift */; };
 		46DC2EB52CE91F7100F0F7A4 /* Predators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DC2EB42CE91F7100F0F7A4 /* Predators.swift */; };
+		46E435432CF4F62B0079D374 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E435422CF4F62B0079D374 /* Stickers.xcassets */; };
+		46E435472CF4F62B0079D374 /* ApexStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46E435402CF4F6290079D374 /* ApexStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,28 @@
 			remoteGlobalIDString = 46CEE7FA2CE772BB00F1A4AD;
 			remoteInfo = "Apex Predators";
 		};
+		46E435452CF4F62B0079D374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46CEE7F32CE772BB00F1A4AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46E4353F2CF4F6290079D374;
+			remoteInfo = ApexStickers;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46E435482CF4F62B0079D374 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				46E435472CF4F62B0079D374 /* ApexStickers.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4690F4372CF23C3D006E705E /* PredatorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetailView.swift; sourceTree = "<group>"; };
@@ -56,6 +79,9 @@
 		46D767632CF3AC0F00D6F348 /* PredatorMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorMapView.swift; sourceTree = "<group>"; };
 		46DC2EB22CE918D900F0F7A4 /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
 		46DC2EB42CE91F7100F0F7A4 /* Predators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predators.swift; sourceTree = "<group>"; };
+		46E435402CF4F6290079D374 /* ApexStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ApexStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E435422CF4F62B0079D374 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		46E435442CF4F62B0079D374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +115,7 @@
 				46CEE7FD2CE772BB00F1A4AD /* Apex Predators */,
 				46CEE80E2CE772BD00F1A4AD /* Apex PredatorsTests */,
 				46CEE8182CE772BD00F1A4AD /* Apex PredatorsUITests */,
+				46E435412CF4F6290079D374 /* ApexStickers */,
 				46CEE7FC2CE772BB00F1A4AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +126,7 @@
 				46CEE7FB2CE772BB00F1A4AD /* Apex Predators.app */,
 				46CEE80B2CE772BD00F1A4AD /* Apex PredatorsTests.xctest */,
 				46CEE8152CE772BD00F1A4AD /* Apex PredatorsUITests.xctest */,
+				46E435402CF4F6290079D374 /* ApexStickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +173,15 @@
 			path = "Apex PredatorsUITests";
 			sourceTree = "<group>";
 		};
+		46E435412CF4F6290079D374 /* ApexStickers */ = {
+			isa = PBXGroup;
+			children = (
+				46E435422CF4F62B0079D374 /* Stickers.xcassets */,
+				46E435442CF4F62B0079D374 /* Info.plist */,
+			);
+			path = ApexStickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,10 +192,12 @@
 				46CEE7F72CE772BB00F1A4AD /* Sources */,
 				46CEE7F82CE772BB00F1A4AD /* Frameworks */,
 				46CEE7F92CE772BB00F1A4AD /* Resources */,
+				46E435482CF4F62B0079D374 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46E435462CF4F62B0079D374 /* PBXTargetDependency */,
 			);
 			name = "Apex Predators";
 			productName = "Apex Predators";
@@ -201,6 +240,21 @@
 			productReference = 46CEE8152CE772BD00F1A4AD /* Apex PredatorsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		46E4353F2CF4F6290079D374 /* ApexStickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46E4354B2CF4F62B0079D374 /* Build configuration list for PBXNativeTarget "ApexStickers" */;
+			buildPhases = (
+				46E4353E2CF4F6290079D374 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApexStickers;
+			productName = ApexStickers;
+			productReference = 46E435402CF4F6290079D374 /* ApexStickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +276,9 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 46CEE7FA2CE772BB00F1A4AD;
 					};
+					46E4353F2CF4F6290079D374 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = 46CEE7F62CE772BB00F1A4AD /* Build configuration list for PBXProject "Apex Predators" */;
@@ -240,6 +297,7 @@
 				46CEE7FA2CE772BB00F1A4AD /* Apex Predators */,
 				46CEE80A2CE772BD00F1A4AD /* Apex PredatorsTests */,
 				46CEE8142CE772BD00F1A4AD /* Apex PredatorsUITests */,
+				46E4353F2CF4F6290079D374 /* ApexStickers */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +324,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E4353E2CF4F6290079D374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E435432CF4F62B0079D374 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +381,11 @@
 			isa = PBXTargetDependency;
 			target = 46CEE7FA2CE772BB00F1A4AD /* Apex Predators */;
 			targetProxy = 46CEE8162CE772BD00F1A4AD /* PBXContainerItemProxy */;
+		};
+		46E435462CF4F62B0079D374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46E4353F2CF4F6290079D374 /* ApexStickers */;
+			targetProxy = 46E435452CF4F62B0079D374 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -572,6 +643,44 @@
 			};
 			name = Release;
 		};
+		46E435492CF4F62B0079D374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2C7RH83C3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApexStickers/Info.plist;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amw.Apex-Predators.ApexStickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46E4354A2CF4F62B0079D374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2C7RH83C3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApexStickers/Info.plist;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amw.Apex-Predators.ApexStickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +716,15 @@
 			buildConfigurations = (
 				46CEE8262CE772BD00F1A4AD /* Debug */,
 				46CEE8272CE772BD00F1A4AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46E4354B2CF4F62B0079D374 /* Build configuration list for PBXNativeTarget "ApexStickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E435492CF4F62B0079D374 /* Debug */,
+				46E4354A2CF4F62B0079D374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
